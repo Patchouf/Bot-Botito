@@ -262,7 +262,7 @@ def ajuster_portions(recette, portions):
 #recette de pâtisserie gateau, cookie, muffin, tarte aux fruits
 def gateau(portions):
     recette = """
-    ```Ingrédients pour {portions} personnes} :
+    ```Ingrédients :
     1. Farine : 150 g
     2. Sucre : 100 g
     3. Levure chimique : 1 cuillère à café
@@ -274,8 +274,8 @@ def gateau(portions):
 
     Recette du gâteau :
     1. Préchauffez le four à 160°C.
-    2. Mélangez 150 grammes de farine, 100 grammes de sucre, 1 cuillère à café de levure chimique et une pincée de sel dans un bol.
-    3. Ajoutez 3 œufs, 20cl de lait et 1 cuillère à café d'extrait de vanille. Bien mélanger.
+    2. Mélangez la farine, le sucre, la levure chimique et le sel dans un bol.
+    3. Ajoutez les œufs,le lait et l'extrait de vanille. Bien mélanger.
     4. Versez la pâte dans un moule à gâteau beurré.
     5. Faites cuire au four pendant 30-35 minutes ou jusqu'à ce qu'un cure-dent/ la pointe d'un couteau en ressorte propre.
     6. Laissez refroidir avant de glacer.```
@@ -300,7 +300,7 @@ def cookie(portions):
     3. Ajoutez farine, bicarbonate de soude et sel. Bien mélangez.
     4. Déposez des cuillerées de pâte sur une plaque de cuisson.
     5. Faites cuire de 10 à 12 minutes ou jusqu'à ce que les bords soient dorés.
-    6. Laissez refroidir les cookies sur une grille.
+    6. Laissez refroidir les cookies sur une grille.```
     """
     return ajuster_portions(recette, portions)
 
@@ -333,7 +333,7 @@ def tarte(portions):
     3. Sucre : 100 g
     4. Épices (cannelle, etc.) : 1 cuillère à café
     5. Beurre (pour le moule)
-    6. (Optionnel) Garnitures supplémentaires selon le goût```
+    6. (Optionnel) Garnitures supplémentaires selon le goût
     Recette de tarte aux fruits:
     1. Préchauffez le four à 160°C.
     2. Préparez votre pate à tarte faite maison ou utilisez une prête à l'emploi.
