@@ -212,7 +212,7 @@ async def on_member_remove(member):
 @client.event
 async def on_command_error(ctx, error):
   if isinstance(error, commands.MissingRequiredArgument) and ctx.command.name == "recette":
-    await ctx.send("Veuillez fournir un choix de recette parmi : gateau, cookie, muffin, tarte. Ainsi que les portions par personne N'oubliez pas le préfixe '!recette'")
+    await ctx.send("Veuillez fournir un choix de recette parmi : cookie, muffin, tarte. Ainsi que les portions par personne N'oubliez pas le préfixe '!recette'")
   elif isinstance(error, commands.MissingRequiredArgument) and ctx.command.name == "clear":
     await ctx.send("Veuillez fournir un nombre de messages à supprimer. N'oubliez pas le préfixe '!clear'")
   elif isinstance(error, asyncio.TimeoutError):
@@ -228,7 +228,6 @@ async def recette_patisserie(message, choix_patisserie, portions):
 
     #dictionnaire
     patisserie = {
-        'gateau': gateau,
         'cookie': cookie,
         'muffin': muffin,
         'tarte': tarte,
@@ -260,27 +259,27 @@ def ajuster_portions(recette, portions):
     return f"\nRecette ajustée pour {portions} personnes :\n{recette_ajustee}"
 
 #recette de pâtisserie gateau, cookie, muffin, tarte aux fruits
-def gateau(portions):
-    recette = """
-    ```Ingrédients :
-    1. Farine : 150 g
-    2. Sucre : 100 g
-    3. Levure chimique : 1 cuillère à café
-    4. Sel : 1 pincée
-    5. Oeufs : 3
-    6. Lait : 20 cl
-    7. Extrait de vanille : 1 cuillère à café
-    8. Beurre (pour le moule)
+# def gateau(portions):
+#     recette = """
+#     ```Ingrédients :
+#     1. Farine : 150 g
+#     2. Sucre : 100 g
+#     3. Levure chimique : 1 cuillère à café
+#     4. Sel : 1 pincée
+#     5. Oeufs : 3
+#     6. Lait : 20 cl
+#     7. Extrait de vanille : 1 cuillère à café
+#     8. Beurre (pour le moule)
 
-    Recette du gâteau :
-    1. Préchauffez le four à 160°C.
-    2. Mélangez la farine, le sucre, la levure chimique et le sel dans un bol.
-    3. Ajoutez les œufs,le lait et l'extrait de vanille. Bien mélanger.
-    4. Versez la pâte dans un moule à gâteau beurré.
-    5. Faites cuire au four pendant 30-35 minutes ou jusqu'à ce qu'un cure-dent/ la pointe d'un couteau en ressorte propre.
-    6. Laissez refroidir avant de glacer.```
-    """
-    return ajuster_portions(recette, portions)
+#     Recette du gâteau :
+#     1. Préchauffez le four à 160°C.
+#     2. Mélangez la farine, le sucre, la levure chimique et le sel dans un bol.
+#     3. Ajoutez les œufs,le lait et l'extrait de vanille. Bien mélanger.
+#     4. Versez la pâte dans un moule à gâteau beurré.
+#     5. Faites cuire au four pendant 30-35 minutes ou jusqu'à ce qu'un cure-dent/ la pointe d'un couteau en ressorte propre.
+#     6. Laissez refroidir avant de glacer.```
+#     """
+#     return ajuster_portions(recette, portions)
 
 def cookie(portions):
     recette = """
@@ -293,7 +292,7 @@ def cookie(portions):
     6. Sel : 1 pincée
     7. (Optionnel) Pépites de chocolat : 150 g
     8. (Optionnel) Noix hachées : 150 g
-    9. (Optionnel) Vanille :  1 cuillère à café```
+    9. (Optionnel) Vanille :  1 cuillère à café
     Recette des cookies :
     1. Préchauffez le four à 170°C.
     2. Dans un bol, mélangez le beurre, le sucre et les œufs.
